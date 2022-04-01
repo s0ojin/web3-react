@@ -109,7 +109,7 @@ function App() {
     <li><input type="button" value="delete" onClick = {()=>{
       const newTopics = [];
       for(let i=0; i<topics.length; i++) {
-        if(topics[i].id !== id) {
+        if(topics[i].id != id) {
           newTopics.push(topics[i]);
         }
       }
@@ -141,21 +141,11 @@ function App() {
       for(let i=0; i<newTopics.length; i++) {
         if(newTopics[i].id == id) {
           newTopics[i] = updatedTopic;
-          console.log("catch");
           break;
         }
       }
       setTopics(newTopics);
-      // let compare = [
-      //   {id:1, title:"html", body:"html is..."},
-      //   {id:2, title:"css", body:"css is..."},
-      //   {id:3, title:"javascript", body:"javascript is..."},
-      //   {id:4, title:title, body:body}
-      // ]
-      // setTopics(compare);
-      // console.log(newTopics === compare);
       console.log(newTopics);
-      // console.log(compare);
       setMode("READ");
     }}></Update>
   }
